@@ -1,6 +1,5 @@
-# paper-ui
-some modern paper UI style pack (refer from google)
+Some modern paper-style UI pack (reference: Google)
 
-usage not complete yet
+Usage is temporarily not available
 
-for demo html, font not included in this repository
+Fonts used in the demo html are not included in this repository
