@@ -1,0 +1,26 @@
+.paper-button {display:inline-flex; margin:2px; -webkit-tap-highlight-color:transparent; height:32px; padding:0 12px 0 12px; cursor:pointer; position:relative; border-radius:3px; user-select:none; outline:none; justify-content:center; align-items:center; font-family:"roboto"}
+.paper-button * {pointer-events: none;}
+.paper-ripple {
+	border-radius: inherit;
+	bottom: 0;
+	display: block;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translate3d(0, 0, 0);
+}
+.ripple
+{
+	background-color: currentcolor;
+	opacity: .25;
+	position: absolute;
+	will-change: height, transform, width;
+	border-radius: 50%;
+}
+.paper-button::after
+{
+	content:attr(data-txt);
+	display:block;
+}

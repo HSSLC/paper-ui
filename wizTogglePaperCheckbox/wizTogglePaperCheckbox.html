@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Wiz Toggle Paper Checkbox</title>
+		<style>
+			@font-face
+			{
+				font-family:"roboto";
+				src:url(../font/roboto-regular.woff2);
+			}
+			html,body {height:100%; width:100%}
+			body {margin:0; display:flex; align-items:center; justify-content:center}
+		</style>
+	</head>
+	<body>
+		<!-- import css and js, this "uncontrolled-radio-button" need googlePaperButton packs -->
+		<link href="../googlePaperButton/googlePaperButton.css" rel="stylesheet" />
+		<link href="wizTogglePaperCheckbox.css" rel="stylesheet" />
+		<script language="javascript" src="../googlePaperButton/googlePaperButton.js"></script>
+		<script language="javascript" src="wizTogglePaperCheckbox.js"></script>
+		<!-- usage -->
+		<!-- a element class with "paper-button", "wiz-toggle-paper-checkbox", "tabindex" decide it is focusable by keyboard or not -->
+		<!-- "data-id" after init will become element's "id" attr, "data-defchecked" mean will it checked by default -->
+		<!-- if you are using "label" and "for" attr in same time, you will import "lbHtmlForFix.js" in googlePaperButton pack too -->
+		<label class="paper-button wiz-toggle-paper-checkbox" data-id="1" data-defchecked="true"></label>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+.md-select-wrapper
+{
+	display: inline-block;
+}
+.md-select-wrapper>.md-select
+{
+	-webkit-tap-hightlight:transparent;
+	-webkit-appearance:none;
+	margin-right:-12px;
+	padding:3px calc(12px + 3% + 0.9em + 3px) 4px 12px;
+	background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjEycHgiIHZpZXdCb3g9IjAgMCAyNCAxMiIgZmlsbD0iIzc1NzU3NSI+PGc+PHBhdGggZD0iTSAwIDAgTCAyNCAwIEwgMTIgMTIgeiIvPjwvZz48L3N2Zz4K) calc(100% - 3% - 12px) center no-repeat;
+	background-size:0.9em;
+	border:none;
+	cursor:pointer;
+	outline:none;
+	width:calc(200px + 2 * 12px);
+	height:22px;
+	font-family:Roboto;
+	font-size:13px;
+}
+.underlines
+{
+	content:"";
+	position:relative;
+	height:2px;
+	margin-left:12px;
+	top:-2px;
+	border-bottom:1px solid #e0e0e0;
+}
+.md-select-wrapper>.underlines::before
+{
+	content:"";
+	position:absolute;
+	width:100%;
+	transform:scaleX(0);
+	transition:transform 200ms ease-in;
+	transform-origin:center center;
+	top:1px;
+	border-bottom:2px solid #4285f4;
+}
+.md-select-wrapper>.md-select:focus~.underlines::before
+{
+	transform:none;
+}

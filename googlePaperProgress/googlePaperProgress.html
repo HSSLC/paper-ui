@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Google Paper Progress</title>
+		<style>
+			html,body {height:100%; width:100%;}
+			body {margin:0; display:flex; align-items:center; justify-content:center; background-color:white}
+		</style>
+	</head>
+	<body>
+		<!-- import css -->
+		<link rel="stylesheet" href="googlePaperProgress.css" />
+		<!-- usage -->
+		<!-- a element with class "paper-progress", attr "data-init" decide paper-progress in initialization style or not, element width need a value -->
+		<div class="paper-progress" data-init="1" style="width:527px">
+			<!-- there are two progress value can be used, one is blue the other is light blue, style of scaleX will be progress value 0(0%)~1(100%) -->
+			<div class="secondaryProgress" style="transform:scaleX(0)"></div>
+			<div class="primaryProgress" style="transform:scaleX(0)"></div>
+		</div>
+	</body>
+</html>

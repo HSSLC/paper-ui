@@ -1,0 +1,88 @@
+.paper-progress
+{
+	height:4px;
+	position:relative;
+	overflow:hidden;
+	min-width:480px;
+	margin-top:16px;
+	background-color:rgb(223,222,223);
+}
+.secondaryProgress
+{
+	transform-origin:left center;
+	background-color:#b7e1cd;
+	height:4px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	top:0;
+	right:0;
+}
+.primaryProgress
+{
+	transform-origin:left center;
+	background-color:rgb(54,126,237);
+	display:block;
+	position:absolute;
+	bottom:0;
+	left:0;
+	top:0;
+	right:0;
+	height:4px;
+}
+.paper-progress[data-init="1"]>.primaryProgress
+{
+	transform-origin: right center;
+	animation: indeterminate-bar 2s linear infinite;
+}
+.paper-progress[data-init="1"]>.primaryProgress::after
+{
+	content:"";
+	transform-origin: center center;
+	animation: indeterminate-splitter 2s linear infinite;
+	background-color:rgb(223,222,223);
+	display:block;
+	position:absolute;
+	bottom:0;
+	left:0;
+	top:0;
+	right:0;
+	height:4px;
+}
+
+@keyframes indeterminate-splitter {
+	0% {
+		transform: scaleX(.75) translateX(-125%);
+	}
+
+	30% {
+		transform: scaleX(.75) translateX(-125%);
+		animation-timing-function: cubic-bezier(.42,0,.6,.8);
+	}
+
+	90% {
+		transform: scaleX(.75) translateX(125%);
+	}
+
+	100% {
+		transform: scaleX(.75) translateX(125%);
+	}
+}
+@keyframes indeterminate-bar {
+	0% {
+		transform: scaleX(1) translateX(-100%);
+	}
+
+	50% {
+		transform: scaleX(1) translateX(0%);
+	}
+
+	75% {
+		transform: scaleX(1) translateX(0%);
+		animation-timing-function: cubic-bezier(.28,.62,.37,.91);
+	}
+
+	100% {
+		transform: scaleX(0) translateX(0%);
+	}
+}

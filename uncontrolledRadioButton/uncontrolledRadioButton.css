@@ -1,0 +1,49 @@
+.uncontrolled-radio-button
+{
+	height:16px;
+	width:16px;
+	padding:0;
+	border-radius:50%;
+	margin:0 4px -2px 2px;
+	display:inline-block;
+}
+.uncontrolled-radio-button .paper-ripple
+{
+	top:-12px;
+	left:-12px;
+	height:40px;
+	width:40px;
+}
+.urb-disc-border
+{
+	--urb-disc-color:#5f6368;
+	border:2px solid var(--urb-disc-color);
+	height:16px;
+	width:16px;
+	box-sizing:border-box;
+	border-radius:50%;
+	position:absolute;
+}
+.urb-disc
+{
+	--urb-disc-color:#5f6368;
+	height:16px;
+	width:16px;
+	border-radius:50%;
+	background-color:var(--urb-disc-color);
+	transform:scale(0);
+	transition:none;
+}
+.uncontrolled-radio-button input:checked~.urb-disc
+{
+	transform:scale(0.5);
+	transition:transform 200ms
+}
+.uncontrolled-radio-button input:checked~.urb-disc,.uncontrolled-radio-button input:checked~.urb-disc-border
+{
+	--urb-disc-color:#1a73e8;
+}
+.uncontrolled-radio-button input
+{
+	display:none;
+}

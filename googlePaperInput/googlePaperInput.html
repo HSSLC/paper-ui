@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Google Paper Input</title>
+		<style>
+			@font-face
+			{
+				font-family:"roboto";
+				src:url(../font/roboto-regular.woff2);
+			}
+			html,body {height:100%; width:100%;}
+			body {margin:0; display:flex; align-items:center; justify-content:center}
+		</style>
+	</head>
+	<body>
+		<!-- import css -->
+		<link rel="stylesheet" href="googlePaperInput.css" />
+		<!-- usage-->
+		<!-- a element with class "paper-input" and specific width -->
+		<div class="paper-input" style="width:480px">
+			<!-- a text input element with "id" and order must be 1 -->
+			<input type="text" id="1" autocomplete="off"/>
+			<!-- a label for hint text that is before then input element, "for" attr must the same to input element "id" -->
+			<label for="1">paper input</label>
+			<!-- underline element, class is "underlines-pi" -->
+			<div class="underlines-pi"></div>
+			<!-- the order of these elements can't swap, else paper-input maybe not work -->
+		</div>
+	</body>
+</html>
